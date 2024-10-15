@@ -99,11 +99,19 @@ h6 {
   padding: 10px;
   color: #2e4455;
 }
+.indicadores p{
+  text-align: center;
+  padding: 20px 10px;
+  color: #2e4455;
+
+}
+
 .images {
   display: flex;
   justify-content: center;
   gap: 0px;
   padding-top: 20px;
+  
   
 }
 
@@ -357,13 +365,16 @@ section,
 /*--------------------------------------------------------------
 # HidroApp Section
 --------------------------------------------------------------*/
-.section .HidroApp{
-  /* background: #0c7fcc; */
-
-  /* position: absolute;
-  z-index: 99999;
-  bottom: 0px;*/
-  padding: 30px 60px; 
+#HidroApp{
+  padding: 70px 50px;
+}
+#indicadores{
+  padding: 50px 30px;
+  background-color:rgb(238, 236, 232); 
+  padding: 50px 50px;
+}
+#footer{
+  padding: 50px 0;
 }
 .HidroApp .card-item {
   padding: 10px; 
