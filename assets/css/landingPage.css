@@ -1,0 +1,614 @@
+/**
+* Template URL: https://bootstrapmade.com/mamba-one-page-bootstrap-template-free/
+* Updated: Aug 07 2024 with Bootstrap v5.3.3
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+
+/*--------------------------------------------------------------
+# Font & Color Variables
+# Help: https://bootstrapmade.com/color-system/
+--------------------------------------------------------------*/
+/* Fonts */
+:root {
+  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway",  sans-serif;
+  --nav-font: "Poppins",  sans-serif;
+}
+
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root { 
+  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --default-color: #212529; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #2e4455; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #428bca; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+}
+
+/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+:root {
+  --nav-color: #212529;  /* The default color of the main navmenu links */
+  --nav-hover-color: #428bca; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #428bca; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+}
+
+/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+
+.light-background {
+  --background-color: #f5f9fc;
+  --surface-color: #ffffff;
+}
+
+.dark-background {
+  --background-color: #263746;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --surface-color: #385167;
+  --contrast-color: #ffffff;
+}
+
+/* Smooth scroll */
+:root {
+  scroll-behavior: smooth;
+}
+
+/*--------------------------------------------------------------
+# General Styling & Shared Classes
+--------------------------------------------------------------*/
+body {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-family: var(--default-font);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+
+ .indicadores .section{
+  /* background: #0c7fcc; */
+
+  /* position: absolute;
+  z-index: 99999;
+  bottom: 0px;*/
+  padding: 30px 60px; 
+}
+.indicadores h2{
+  text-align: center;
+  padding: 10px;
+  color: #2e4455;
+}
+.images {
+  display: flex;
+  justify-content: center;
+  gap: 0px;
+  padding-top: 20px;
+  
+}
+
+.photo {
+  width: 500px;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 3px solid #fff;
+  transform: rotate(-8deg);
+  border-radius: 10px;
+  /* border: #000 solid 3px; */
+}
+
+
+
+.photo1 {
+  transform: rotate(-3deg);
+  transition: 0.3s all;
+
+}
+.photo1:hover{
+  transform: rotate(-3deg) scale(1.1);
+}
+
+.photo2 {
+  transform: rotate(5deg);
+  transition: 0.3s all;
+}
+.photo2:hover{
+  transform:  rotate(5deg) scale(1.1);
+}
+
+.photo3 {
+  transform: rotate(12deg);
+  margin: -45px;
+  margin-top: 45px;
+  transition: 0.3s all;
+}
+.photo3:hover{
+  transform: rotate(12deg) scale(1.1);
+}
+
+/*--------------------------------------------------------------
+# Global Sections
+--------------------------------------------------------------*/
+section,
+.section {
+  color: var(--default-color);
+  /* background-color: var(--background-color); */
+  scroll-margin-top: 120px;
+  overflow: clip;
+}
+
+@media (max-width: 1199px) {
+
+  section,
+  .section {
+    scroll-margin-top: 100px;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero {
+  padding: 0;
+ 
+}
+
+.hero .carousel {
+  width: 100%;
+  min-height:95vh;
+  padding: 0;
+  margin: 0;
+  background-color: var(--background-color);
+  position: relative;
+}
+.hero .carousel p{
+  font-size:larger;
+}
+.hero img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero .carousel-item {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.hero .carousel-item:before {
+  content: "";
+  background: color-mix(in srgb, var(--background-color), transparent 30%);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+
+.hero .carousel-container {
+  position: absolute;
+  /* inset: 90px 64px 64px 64px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 3;
+}
+
+.hero .textoLateral{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 3;
+  
+  /* background-color: rgba(5, 150, 82, 0.1); */
+  height: 95%;
+
+}
+
+
+.hero .textoLateral::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+.hero h2 {
+  margin-bottom: 30px;
+  font-size: 48px;
+  font-weight: 700;
+  animation: fadeInDown 1s both;
+}
+
+
+.hero p {
+  animation: fadeInDown 1s both 0.2s;
+}
+
+@media (min-width: 1024px) {
+  .hero h2,
+  .hero p {
+    max-width: 70%;
+    padding: 10px;
+    
+  }
+}
+@media (min-width: 1024px) {
+  .hero .carousel {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: var(--background-color);
+    position: relative;
+    height: 60vh;
+  }
+ 
+}
+@media (max-width: 768px) {
+ #hero-carousel .carousel-item img{
+    /* min-height: 100%;
+    padding: 0;
+    margin-top: 20px;
+    background-color: var(--background-color);
+    position: relative;
+    clip: rect(100px, 150px, 100px, 150px); */
+  }
+ 
+}
+@media (max-width: 768px) {
+  .hero .textoLateral p{
+    padding: 10px;
+    font-size: 16px;;
+   }
+  
+ }
+ @media (max-width: 768px) {
+  .hero h2 {
+    font-size: 20px;
+    padding: 10px;
+  }
+}
+
+
+.hero .btn-get-started {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  animation: fadeInUp 1s both 0.4s;
+}
+
+.hero .btn-get-started:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+.hero .carousel-indicators {
+  list-style: none;
+}
+
+.hero .carousel-indicators li {
+  cursor: pointer;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+/*--------------------------------------------------------------
+# HidroApp Section
+--------------------------------------------------------------*/
+.section .HidroApp{
+  /* background: #0c7fcc; */
+
+  /* position: absolute;
+  z-index: 99999;
+  bottom: 0px;*/
+  padding: 30px 60px; 
+}
+.HidroApp .card-item {
+  padding: 10px; 
+  transition: all ease-in-out 0.3s;
+  width: auto;
+  height: 180px;
+  position: relative;
+  border: solid 0px #428BCA;
+  margin-top: -20px;
+  color: #000;
+}
+
+.HidroApp .container p{
+  color: #25282c;
+  font-size: 16px;
+  
+}
+.HidroApp .icon{
+  color: var(--accent-color);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  width: auto;
+  height: 55px;
+  padding: 10px;
+  }
+.HidroApp div{
+  font-size: 14px;
+  text-align: center;
+  align-items: center;
+
+}
+.HidroApp .card-item i {
+  color:#FFF;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 700;
+  width: 50px;
+  height: 50px;
+  background: #428bca;
+  padding: 20px;
+  border-radius: 50%;
+}
+
+.HidroApp h2{
+  text-align: center;
+  margin-bottom: 10px;
+  
+}
+
+.HidroApp .card-item h4 {
+  color: #2e4455;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; 
+  font-size: 18px;
+  padding: 5px;
+  font-weight: bold;
+ 
+}
+
+.HidroApp .card-item p {
+  font-size: 15px;
+  text-align: center!important;
+  color: #25282c;
+
+}
+
+.HidroApp .btn-get-started {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 32px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  animation: fadeInUp 1s both 0.4s;
+}
+
+.HidroApp .btn-get-started:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+/*--------------------------------------------------------------
+Footer
+--------------------------------------------------------------*/
+.footer {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-size: 16px;
+  position: relative;
+
+  min-width: 100%;
+  
+}
+
+.footer .footer-top {
+  padding-top: 50px;
+}
+
+.footer .footer-about .logo {
+  line-height: 1;
+  margin-bottom: 25px;
+}
+
+.footer .footer-about .logo img {
+  max-height: 40px;
+  margin-right: 6px;
+}
+
+.footer .footer-about .logo span {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.footer .footer-about p {
+  font-size: 14px;
+  font-family: var(--heading-font);
+}
+
+.footer .social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
+  font-size: 16px;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin-right: 10px;
+  transition: 0.3s;
+ 
+}
+
+.footer .social-links a:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.footer h4 {
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.footer .footer-links {
+  margin-bottom: 30px;
+}
+
+.footer .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer .footer-links ul i {
+  padding-right: 2px;
+  font-size: 12px;
+  line-height: 0;
+}
+
+.footer .footer-links ul li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.footer .footer-links ul li:first-child {
+  padding-top: 0;
+}
+
+.footer .footer-links ul a {
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  display: inline-block;
+  line-height: 1;
+}
+
+.footer .footer-links ul a:hover {
+  color: var(--accent-color);
+}
+
+.footer .footer-contact p {
+  margin-bottom: 5px;
+}
+
+.footer .copyright {
+  padding: 25px 0;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.footer .copyright p {
+  margin-bottom: 0;
+}
+
+.footer .credits {
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background-color: var(--background-color);
+  transition: all 0.6s ease-out;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid var(--accent-color);
+  border-top-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: animate-preloader 1s linear infinite;
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
