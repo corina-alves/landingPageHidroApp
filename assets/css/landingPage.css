@@ -116,7 +116,7 @@ h6 {
 }
 
 .photo {
-  width: 500px;
+  width: 100%;
   height: auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border: 3px solid #fff;
@@ -130,7 +130,8 @@ h6 {
 .photo1 {
   transform: rotate(-3deg);
   transition: 0.3s all;
-
+  margin: 30px;
+  margin-top:5px ;
 }
 .photo1:hover{
   transform: rotate(-3deg) scale(1.1);
@@ -285,18 +286,15 @@ section,
 }
 @media (max-width: 768px) {
  #hero-carousel .carousel-item img{
-    /* min-height: 100%;
+   
     padding: 0;
-    margin-top: 20px;
-    background-color: var(--background-color);
-    position: relative;
-    clip: rect(100px, 150px, 100px, 150px); */
+   
   }
  
 }
 @media (max-width: 768px) {
   .hero .textoLateral p{
-    padding: 10px;
+    padding: 20px;
     font-size: 18px;;
    }
   
@@ -304,7 +302,7 @@ section,
  @media (max-width: 768px) {
   .hero h2 {
     font-size: 28px;
-    padding: 10px;
+    padding: 20px;
    
   }
 }
@@ -312,17 +310,18 @@ section,
 
 .hero .btn-get-started {
   color: var(--contrast-color);
-  background: var(--accent-color);
+  background: rgb(23, 128, 248);
   font-family: var(--heading-font);
-  font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
   display: inline-block;
-  padding: 12px 40px;
+  padding: 20px 60px;
   border-radius: 50px;
   transition: 0.5s;
-  margin: 10px;
+  margin: 20px;
   animation: fadeInUp 1s both 0.4s;
+  font-weight: bold;
+  margin-top: 100px;;
 }
 
 .hero .btn-get-started:hover {
@@ -371,13 +370,13 @@ section,
 #indicadores{
   padding: 50px 30px;
   background-color:rgb(238, 236, 232); 
-  padding: 50px 50px;
+  padding: 50px 0 150px;
 }
 #footer{
   padding: 50px 0;
 }
 .HidroApp .card-item {
-  padding: 10px; 
+  padding: 20px; 
   transition: all ease-in-out 0.3s;
   width: auto;
   height: 180px;
@@ -403,10 +402,11 @@ section,
   height: 55px;
   padding: 10px;
   }
-.HidroApp div{
+.HidroApp .container{
   font-size: 14px;
   text-align: center;
   align-items: center;
+  width: 100%;
 
 }
 .HidroApp .card-item i {
@@ -442,12 +442,24 @@ section,
  
 }
 
+@media (max-width: 768px) {
+  .HidroApp .container p{
+  text-align: center;
+    font-size: 18px;
+    padding: 0 0 50px;
+  
+   }
+  
+ }
+
 .HidroApp .card-item p {
   font-size: 15px;
   text-align: center!important;
   color: #25282c;
 
 }
+
+
 
 .HidroApp .btn-get-started {
   color: var(--contrast-color);
@@ -462,6 +474,7 @@ section,
   transition: 0.5s;
   margin: 10px;
   animation: fadeInUp 1s both 0.4s;
+  border: solid 1px #F00;
 }
 
 .HidroApp .btn-get-started:hover {
@@ -543,6 +556,7 @@ Footer
   list-style: none;
   padding: 0;
   margin: 0;
+  color:#212529;
 }
 
 .footer .footer-links ul i {
