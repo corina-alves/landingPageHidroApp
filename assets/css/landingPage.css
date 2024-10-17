@@ -11,29 +11,41 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #212529; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #2e4455; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #428bca; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+:root {
+  --background-color: #ffffff;
+  /* Background color for the entire website, including individual sections */
+  --default-color: #212529;
+  /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #2e4455;
+  /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #428bca;
+  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff;
+  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff;
+  /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #212529;  /* The default color of the main navmenu links */
-  --nav-hover-color: #428bca; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #428bca; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #212529;
+  /* The default color of the main navmenu links */
+  --nav-hover-color: #428bca;
+  /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff;
+  /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff;
+  /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #212529;
+  /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #428bca;
+  /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -66,7 +78,6 @@ body {
 }
 
 a {
-  color: var(--accent-color);
   text-decoration: none;
   transition: 0.3s;
 }
@@ -86,20 +97,22 @@ h6 {
   font-family: var(--heading-font);
 }
 
- .indicadores .section{
+.indicadores .section {
   /* background: #0c7fcc; */
 
   /* position: absolute;
   z-index: 99999;
   bottom: 0px;*/
-  padding: 30px 60px; 
+  padding: 30px 60px;
 }
-.indicadores h2{
+
+.indicadores h2 {
   text-align: center;
   padding: 10px;
   color: #2e4455;
 }
-.indicadores p{
+
+.indicadores p {
   text-align: center;
   padding: 20px 10px;
   color: #2e4455;
@@ -111,8 +124,8 @@ h6 {
   justify-content: center;
   gap: 0px;
   padding-top: 20px;
-  
-  
+
+
 }
 
 .photo {
@@ -131,9 +144,10 @@ h6 {
   transform: rotate(-3deg);
   transition: 0.3s all;
   margin: 30px;
-  margin-top:5px ;
+  margin-top: 5px;
 }
-.photo1:hover{
+
+.photo1:hover {
   transform: rotate(-3deg) scale(1.1);
 }
 
@@ -141,8 +155,9 @@ h6 {
   transform: rotate(5deg);
   transition: 0.3s all;
 }
-.photo2:hover{
-  transform:  rotate(5deg) scale(1.1);
+
+.photo2:hover {
+  transform: rotate(5deg) scale(1.1);
 }
 
 .photo3 {
@@ -151,7 +166,8 @@ h6 {
   margin-top: 45px;
   transition: 0.3s all;
 }
-.photo3:hover{
+
+.photo3:hover {
   transform: rotate(12deg) scale(1.1);
 }
 
@@ -179,93 +195,54 @@ section,
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 80px);
   position: relative;
-  padding: 0;
+  padding: 10%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   overflow: hidden;
+  color: #FFF;
 }
 
-.hero .hidro {
-  position: relative;
+
+
+.hero .textoLateral {
   inset: 0;
-  z-index: 3;
-  padding: 70px 50px 60px 50px;
-  /* background-color: #F00; */
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 9;
+  color: #FFF;
 }
 
-@media (max-width: 768px),
-(max-height: 480px) {
-  .hero {
-    padding: -140px;
-
-  }
-}
-@media (max-width: 667px),
-(max-height: 480px) {
-  .hero  h2 {
-    padding: 0px 10px 10px 10px;
-    font-size: 12px;
-  }
-}
-
-.hero .hidro h2 {
-  margin-bottom: 20px;
-  padding-bottom: 30px;
-  font-size: 46px;
-  font-weight: 700;
-  position: relative;
+.hero .title{
+  font-size: 45px;
+  font-weight: 600;
   animation: fadeInDown 1s both 0.2s;
 }
 
-/* .hero .hidro h2:after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 80px;
-  height: 4px;
-  background: var(--accent-color);
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-} */
-
-@media (max-width: 768px) {
-  .hero .hidro h2 {
-    font-size: 24px;
-    margin-top: -20px;
-  }
-}
-
-.hero .hidro p {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  font-size: 18px;
+.hero .subTitle{
+  font-size: large;
   animation: fadeInDown 1s both 0.2s;
-}
-
-.hero .hidro .btn-get-started {
-  color: var(--contrast-color);
-  font-family: var(--heading-font);
-  font-weight: 500;
-  font-size: 18px;
-  letter-spacing: 0px;
-  display: inline-block;
-  padding: 15px 30px;
-  border-radius: 50px;
-  transition: 0.5s;
-  margin: 10px;
-  border: 2px solid var(--accent-color);
-  background-color: #1780F8;
-  width: auto;
-  animation: fadeInUp 1s both 0.4s;
+  padding: 50px 0px;
   
 }
+.hero .button a{
+  font-weight: 500;
+  font-size: 18px;
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 50px; 
+  transition: 0.5s;
+  margin: 10px;
+  background-color: #0d73f0;
+  width: auto;
+  animation: fadeInUp 1s both 0.4s;
+  color: #FFF;
 
-.hero .hidro .btn-get-started:hover {
-  background-color: rgba(24, 23, 23, 0.1);
 }
 
 .hero .carousel {
@@ -281,7 +258,7 @@ section,
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
-  
+
 }
 
 .hero .carousel-item img {
@@ -296,11 +273,63 @@ section,
 
 .hero .carousel-item::before {
   content: "";
-  background-color: color-mix(in srgb, var(--background-color), transparent 30%);
+  background-color: color-mix(in srgb, var(--heading-color), transparent 30%);
   position: absolute;
   inset: 0;
   z-index: 2;
 }
+
+
+@media screen and (max-width: 1250px) {
+  .hero.section{
+    padding: 5%;
+  }
+
+}
+
+@media screen and (max-width: 900px) {
+  .hero .textoLateral{
+    width: 75%;
+  }
+
+}
+
+
+@media screen and (max-width: 600px) {
+  .hero.section{
+    padding: 20px;
+  }
+
+  .hero .textoLateral {
+    width: 100%;
+    
+  }
+  .hero .title{
+    font-size: xx-large;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .hero .title{
+    font-size: x-large;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .hero .hidro h2 {
+    font-size: 24px;
+    margin-top: -20px;
+  }
+}
+
+.hero .hidro p {
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  font-size: 18px;
+  animation: fadeInDown 1s both 0.2s;
+}
+
 
 @keyframes fadeInUp {
   from {
@@ -325,36 +354,26 @@ section,
     transform: translate3d(0, 0, 0);
   }
 }
-/* @media (min-width: 640px) {
-  .hero .carousel-control-prev {
-    padding-left: 15px;
-  }
-}
-
-
-@media (min-width: 640px) {
-  .hero .carousel-control-next {
-    padding-right: 15px;
-  }
-} */
-
 
 /*--------------------------------------------------------------
 # HidroApp Section
 --------------------------------------------------------------*/
-#HidroApp{
+#HidroApp {
   padding: 70px 50px;
 }
-#indicadores{
+
+#indicadores {
   padding: 50px 30px;
-  background-color:rgb(238, 236, 232); 
+  background-color: rgb(238, 236, 232);
   padding: 50px 0 150px;
 }
-#footer{
+
+#footer {
   padding: 50px 0;
 }
+
 .HidroApp .card-item {
-  padding: 20px; 
+  padding: 20px;
   transition: all ease-in-out 0.3s;
   width: auto;
   height: 180px;
@@ -364,12 +383,13 @@ section,
   color: #000;
 }
 
-.HidroApp .container p{
+.HidroApp .container p {
   color: #25282c;
   font-size: 16px;
-  
+
 }
-.HidroApp .icon{
+
+.HidroApp .icon {
   color: var(--accent-color);
   text-align: center;
   display: flex;
@@ -379,16 +399,18 @@ section,
   width: auto;
   height: 55px;
   padding: 10px;
-  }
-.HidroApp .container{
+}
+
+.HidroApp .container {
   font-size: 14px;
   text-align: center;
   align-items: center;
   width: 100%;
 
 }
+
 .HidroApp .card-item i {
-  color:#FFF;
+  color: #FFF;
   display: flex;
   text-align: center;
   align-items: center;
@@ -402,10 +424,10 @@ section,
   border-radius: 50%;
 }
 
-.HidroApp h2{
+.HidroApp h2 {
   text-align: center;
   margin-bottom: 10px;
-  
+
 }
 
 .HidroApp .card-item h4 {
@@ -413,26 +435,26 @@ section,
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center; 
+  text-align: center;
   font-size: 18px;
   padding: 5px;
   font-weight: bold;
- 
+
 }
 
 @media (max-width: 768px) {
-  .HidroApp .container p{
-  text-align: center;
+  .HidroApp .container p {
+    text-align: center;
     font-size: 18px;
     padding: 0 0 50px;
-  
-   }
-  
- }
+
+  }
+
+}
 
 .HidroApp .card-item p {
   font-size: 15px;
-  text-align: center!important;
+  text-align: center !important;
   color: #25282c;
 
 }
@@ -469,7 +491,7 @@ Footer
   position: relative;
 
   min-width: 100%;
-  
+
 }
 
 .footer .footer-top {
@@ -511,7 +533,7 @@ Footer
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin-right: 10px;
   transition: 0.3s;
- 
+
 }
 
 .footer .social-links a:hover {
@@ -534,7 +556,7 @@ Footer
   list-style: none;
   padding: 0;
   margin: 0;
-  color:#212529;
+  color: #212529;
 }
 
 .footer .footer-links ul i {
@@ -615,6 +637,3 @@ Footer
     transform: rotate(360deg);
   }
 }
-
-
-
