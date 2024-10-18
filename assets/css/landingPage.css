@@ -170,7 +170,25 @@ h6 {
 .photo3:hover {
   transform: rotate(12deg) scale(1.1);
 }
+@media screen and (max-width: 600px) {
+  .photo.photo3{
+    margin-top:5px ;
+  }
 
+  /* .hero .textoLateral {
+    width: 100%;
+    
+  }
+  .hero .title{
+    font-size: xx-large;
+  } */
+}
+
+@media screen and (max-width: 400px) {
+  .hero .title{
+    font-size: x-large;
+  }
+}
 /*--------------------------------------------------------------
 # Global Sections
 --------------------------------------------------------------*/
