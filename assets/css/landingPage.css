@@ -317,20 +317,6 @@ section,
 
 
 
-@media (max-width: 768px) {
-  .hero .hidro h2 {
-    font-size: 24px;
-    margin-top: -20px;
-  }
-}
-
-.hero .hidro p {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  font-size: 18px;
-  animation: fadeInDown 1s both 0.2s;
-}
-
-
 @keyframes fadeInUp {
   from {
     opacity: 0;
