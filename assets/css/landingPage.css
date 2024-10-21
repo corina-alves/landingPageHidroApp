@@ -1,54 +1,17 @@
-/**
-* Template URL: https://bootstrapmade.com/mamba-one-page-bootstrap-template-free/
-* Updated: Aug 07 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# Font & Color Variables
-# Help: https://bootstrapmade.com/color-system/
---------------------------------------------------------------*/
-/* Fonts */
 :root {
-  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway", sans-serif;
-  --nav-font: "Poppins", sans-serif;
+  --default-font:"Montserrat";
+
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root {
   --background-color: #ffffff;
-  /* Background color for the entire website, including individual sections */
   --default-color: #212529;
-  /* Default color used for the majority of the text content across the entire website */
   --heading-color: #2e4455;
-  /* Color for headings, subheadings and title throughout the website */
   --accent-color: #428bca;
-  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff;
-  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff;
-  /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
-
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
-:root {
-  --nav-color: #212529;
-  /* The default color of the main navmenu links */
-  --nav-hover-color: #428bca;
-  /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff;
-  /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff;
-  /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #212529;
-  /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #428bca;
-  /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
-}
-
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
   --background-color: #f5f9fc;
@@ -63,14 +26,11 @@
   --contrast-color: #ffffff;
 }
 
-/* Smooth scroll */
 :root {
   scroll-behavior: smooth;
 }
 
-/*--------------------------------------------------------------
-# General Styling & Shared Classes
---------------------------------------------------------------*/
+
 body {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -98,11 +58,6 @@ h6 {
 }
 
 .indicadores .section {
-  /* background: #0c7fcc; */
-
-  /* position: absolute;
-  z-index: 99999;
-  bottom: 0px;*/
   padding: 30px 60px;
 }
 
@@ -119,13 +74,12 @@ h6 {
 
 }
 
- .images {
+.images {
   width: 100%;
   display: flex;
   justify-content: center;
   gap: 0px;
   padding-top: 20px;
-
 
 }
 
@@ -138,7 +92,6 @@ h6 {
   transition: 0.3s all;
 }
 
-
 .photo1 {
   transform: rotate(-3deg) translateX(15px);
 
@@ -148,8 +101,6 @@ h6 {
   transform: rotate(3deg) translateX(-15px);
 
 }
-
-
 
 
 .photo1:hover {
@@ -162,21 +113,21 @@ h6 {
 
 .photo3:hover {
   transform: rotate(3deg) scale(1.1);
-} 
+}
 
 
 @media screen and (max-width: 400px) {
-  .hero .title{
+  .hero .title {
     font-size: x-large;
   }
 }
+
 /*--------------------------------------------------------------
 # Global Sections
 --------------------------------------------------------------*/
 section,
 .section {
   color: var(--default-color);
-  /* background-color: var(--background-color); */
   scroll-margin-top: 120px;
   overflow: clip;
 }
@@ -204,8 +155,6 @@ section,
   color: #FFF;
 }
 
-
-
 .hero .textoLateral {
   inset: 0;
   width: 50%;
@@ -215,34 +164,52 @@ section,
   flex-direction: column;
   z-index: 9;
   color: #FFF;
- 
+
 }
 
-.hero .title{
+.hero .title {
   font-size: 45px;
   font-weight: 600;
   animation: fadeInDown 1s both 0.2s;
+  margin-top: -10px;
 }
 
-.hero .subTitle{
+.hero .subTitle {
   font-size: large;
   animation: fadeInDown 1s both 0.2s;
   padding: 50px 0px;
-  
+
 }
-.hero .button a{
+
+.hero .button a {
   font-weight: 500;
   font-size: 18px;
   display: inline-block;
   padding: 15px 30px;
-  border-radius: 50px; 
+  border-radius: 10px;
   transition: 0.5s;
   margin: 10px;
-  background-color: #0d73f0;
+  /* background-color: rgb(10, 9, 9, 0.1); */
+  background-color: #00a2ff;
+  border: 1px transparent solid;
   width: auto;
   animation: fadeInUp 1s both 0.4s;
-  color: #FFF;
+  color: #ffffff;
+  text-decoration: none;
 
+}
+
+.hero .btn-get-started:hover {
+  background: color-mix(in srgb, var(--default-color), transparent 70%);
+  border: 1px #FFF solid;
+}
+
+
+@media screen and (max-width: 600px) {
+.hero .logo img{
+display: none;
+
+}
 }
 
 .hero .carousel {
@@ -281,41 +248,39 @@ section,
 
 
 @media screen and (max-width: 1250px) {
-  .hero.section{
+  .hero.section {
     padding: 5%;
   }
 
 }
 
 @media screen and (max-width: 900px) {
-  .hero .textoLateral{
+  .hero .textoLateral {
     width: 75%;
   }
 
 }
 
-
 @media screen and (max-width: 600px) {
-  .hero.section{
+  .hero.section {
     padding: 20px;
   }
 
   .hero .textoLateral {
     width: 100%;
-    
+
   }
-  .hero .title{
+
+  .hero .title {
     font-size: xx-large;
   }
 }
 
 @media screen and (max-width: 400px) {
-  .hero .title{
+  .hero .title {
     font-size: x-large;
   }
 }
-
-
 
 @keyframes fadeInUp {
   from {
@@ -446,7 +411,6 @@ section,
 }
 
 
-
 .HidroApp .btn-get-started {
   color: var(--contrast-color);
   background: var(--accent-color);
@@ -463,9 +427,6 @@ section,
   border: solid 1px #F00;
 }
 
-.HidroApp .btn-get-started:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
-}
 
 /*--------------------------------------------------------------
 Footer
@@ -589,37 +550,3 @@ Footer
   font-size: 13px;
 }
 
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
-#preloader {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  overflow: hidden;
-  background-color: var(--background-color);
-  transition: all 0.6s ease-out;
-}
-
-#preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border: 6px solid var(--accent-color);
-  border-top-color: color-mix(in srgb, var(--accent-color), transparent 90%);
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: animate-preloader 1s linear infinite;
-}
-
-@keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
